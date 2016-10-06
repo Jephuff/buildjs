@@ -1,0 +1,21 @@
+{
+  "name": "@ncigdc/eslint-config-buildjs-base",
+  "description": "Base ESLint Config used by BuildJS",
+  "version": "0.0.1",
+  "license": "Apache-2.0",
+  "repository": "NCI-GDC/buildjs",
+  "engines": {
+    "node": ">=5"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "eslint-config-airbnb-base": "8.0.0",
+    "eslint-config-cleanjs": "4.0.0",
+    "eslint-plugin-better": "0.1.5",
+    "eslint-plugin-fp": "2.2.0",
+    "eslint-plugin-import": "1.16.0"
+  },
+  "peerDependencies": {
+    "eslint": ">=3"
+  }
+}

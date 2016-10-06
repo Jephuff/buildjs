@@ -1,0 +1,17 @@
+{
+  "name": "@ncigdc/eslint-config-buildjs-node",
+  "description": "ESLint Config for Node used by BuildJS",
+  "version": "0.0.1",
+  "license": "Apache-2.0",
+  "repository": "NCI-GDC/buildjs",
+  "engines": {
+    "node": ">=5"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "@ncigdc/eslint-config-buildjs-base": "^0.0.1"
+  },
+  "peerDependencies": {
+    "eslint": ">=3"
+  }
+}

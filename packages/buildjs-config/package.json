@@ -1,0 +1,11 @@
+{
+  "name": "@ncigdc/buildjs-config",
+  "description": "BuildJS Config Object",
+  "version": "0.0.1",
+  "license": "Apache-2.0",
+  "repository": "NCI-GDC/buildjs",
+  "engines": {
+    "node": ">=5"
+  },
+  "main": "index.js"
+}

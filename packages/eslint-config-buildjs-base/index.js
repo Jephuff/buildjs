@@ -4,8 +4,11 @@ module.exports = {
     'no-underscore-dangle': 0,
     'arrow-parens': 0,
     'no-extra-boolean-cast': 0,
+    'max-len': [2, 120],
+    'no-duplicate-imports': 0,
 
     // ###  import
+    'import/no-duplicates': "error"
     // our src modules are in node_modules but not package.json
     'import/no-extraneous-dependencies': 0,
     // I just found these two kind of annoying

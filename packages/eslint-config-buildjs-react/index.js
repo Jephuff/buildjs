@@ -16,8 +16,6 @@ module.exports = {
     'react/jsx-filename-extension': 0,
     // this seems to ignore flow type
     'react/no-unused-prop-types': 0,
-    // flow doesn't catch implied boolean values
-    "react/jsx-boolean-value": [2, "always"],
 
     // ###  jsx
     // doesn't check props for children

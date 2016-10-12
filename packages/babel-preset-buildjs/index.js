@@ -35,14 +35,14 @@ switch (process.env.BABEL_ENV || process.env.NODE_ENV) {
       case 'single':
         plugins = [
           ...plugins,
-          testPlugins,
+          ...testPlugins,
           ...relayPlugin,
         ];
         break;
       case 'watch':
         plugins = [
           ...plugins,
-          testPlugins,
+          ...testPlugins,
         ];
         break;
       default:

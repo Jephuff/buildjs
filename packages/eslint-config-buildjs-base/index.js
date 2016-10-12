@@ -1,6 +1,6 @@
 const config = require('@ncigdc/buildjs-config');
 
-module.exports = {
+const eslintrc = {
   extends: ['airbnb-base', 'cleanjs'],
   rules: {
     'no-underscore-dangle': 0,
@@ -10,7 +10,7 @@ module.exports = {
     'no-duplicate-imports': 0,
 
     // ###  import
-    'import/no-duplicates': "error"
+    'import/no-duplicates': "error",
     // our src modules are in node_modules but not package.json
     'import/no-extraneous-dependencies': 0,
     // I just found these two kind of annoying
@@ -35,8 +35,10 @@ module.exports = {
     'better',
     'fp',
   ],
-  globals: Object.keys(pkgGlobals).reduce((acc, k) => {
+  globals: Object.keys(config.get('globals')).reduce((acc, k) => {
     acc[k] = true;
     return acc;
   }, {}),
 };
+
+module.exports = eslintrc;

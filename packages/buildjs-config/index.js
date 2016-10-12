@@ -60,5 +60,5 @@ config.set('globals', Object.assign(
 // Utilities
 // ------------------------------------
 config.set('dependencies', pkg.dependencies);
-console.log(config);
+
 module.exports = config;

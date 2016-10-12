@@ -51,7 +51,7 @@ config.set('globals', Object.assign(
     BASE: JSON.stringify(process.env.BASE) || '',
   },
   Object.keys(pkgGlobals).reduce((acc, k) => {
-    acc[k] = JSON.stringify(process.env[k]) || pkgGlobals[k]);
+    acc[k] = JSON.stringify(process.env[k] || pkgGlobals[k]);
     return acc;
   }, {})
 ));

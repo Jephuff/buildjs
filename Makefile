@@ -22,8 +22,7 @@ all: install lint
 
 .PHONY: install
 install:
-	$(Q) yarn
-	$(Q) lerna bootstrap --yes
+	$(Q) npm install --loglevel error
 	$(Q) ln -s $(shell pwd)/packages/eslint-config-buildjs-node node_modules/eslint-config-buildjs-node
 	@$(PRINT_OK)
 

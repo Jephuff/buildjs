@@ -1,3 +1,9 @@
+## [0.2.1](https://github.com/nci-gdc/buildjs}/compare/v0.2.0...0.2.1) (2016-10-12)
+
+### :package: Refactor
+
+- missed console.log ([6e0caf8](https://github.com/nci-gdc/buildjs/commit/6e0caf85f930190046075f3a32942cb8cb90d267))
+
 ## [0.2.0](https://github.com/nci-gdc/buildjs}/compare/v0.1.0...0.2.0) (2016-10-12)
 
 ### :sparkles: Features

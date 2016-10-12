@@ -1,3 +1,5 @@
+const config = require('@ncigdc/buildjs-config');
+
 module.exports = {
   extends: ['airbnb-base', 'cleanjs'],
   rules: {
@@ -33,4 +35,5 @@ module.exports = {
     'better',
     'fp',
   ],
+  globals: config.globals,
 };

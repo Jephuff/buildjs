@@ -1,5 +1,8 @@
 const path = require('path');
+const readPkgUp = require('read-pkg-up');
 
+const pkg = readPkgUp.sync().pkg;
+console.log(pkg);
 const config = new Map();
 
 // ------------------------------------
@@ -37,25 +40,21 @@ Edit at Your Own Risk
 // Environment
 // ------------------------------------
 config.set('env', process.env);
-config.set('globals', {
-  'process.env': {
-    NODE_ENV: JSON.stringify(process.env.NODE_ENV),
+config.set('globals', Object.assign(
+  {},
+  {
+    'process.env': {
+      NODE_ENV: JSON.stringify(process.env.NODE_ENV),
+      TEST_ENV: JSON.stringify(process.env.TEST_ENV),
+    },
+    __DEBUG__: parseInt(process.env.DEBUG, 10) === 1
   },
-  __API__: process.env.API || '/api/',
-  NODE_ENV: process.env.NODE_ENV || 'development',
-  __DEV__: process.env.NODE_ENV === 'development',
-  __PROD__: process.env.NODE_ENV === 'production',
-  __DEBUG__: process.env.NODE_ENV === 'development' && parseInt(process.env.DEBUG, 10) === 1,
-  TEST_ENV: process.env.TEST_ENV,
-  __BASE__: process.env.BASE || '',
-});
+  ((pkg.buildjs || {}).config || {}).globals || {}
+));
 
 // ------------------------------------
 // Utilities
 // ------------------------------------
-const packageJSON = require(path.join(config.get('path_project'), 'package.json'));
-const dependencies = Object.keys(packageJSON.dependencies);
-
-config.set('dependencies', dependencies);
+config.set('dependencies', pkg.dependencies);
 
 module.exports = config;

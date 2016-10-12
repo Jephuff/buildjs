@@ -9,9 +9,9 @@ const webpackConfig = require('@ncigdc/webpack-config-buildjs');
 
 const app = express();
 
-const isDevelopment = config.get('env').NODE_ENV === 'development';
+const isDevelopment = process.env.NODE_ENV === 'development';
 const staticDir = config.get(isDevelopment ? 'dir_packages' : 'dir_dist');
-const indexFile = path.join(isDevelopment ? 'root' : config.get('globals').__BASE__, 'index.html');
+const indexFile = path.join(isDevelopment ? 'root' : config.get('globals').BASE, 'index.html');
 
 app.use(gzipStatic(staticDir));
 

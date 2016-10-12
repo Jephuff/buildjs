@@ -2,7 +2,7 @@ const path = require('path');
 const readPkgUp = require('read-pkg-up');
 
 const pkg = readPkgUp.sync().pkg;
-console.log(pkg);
+
 const config = new Map();
 
 // ------------------------------------
@@ -39,7 +39,7 @@ Edit at Your Own Risk
 // ------------------------------------
 // Environment
 // ------------------------------------
-config.set('env', process.env);
+const pkgGlobals = ((pkg.buildjs || {}).config || {}).globals || {};
 config.set('globals', Object.assign(
   {},
   {
@@ -47,14 +47,18 @@ config.set('globals', Object.assign(
       NODE_ENV: JSON.stringify(process.env.NODE_ENV),
       TEST_ENV: JSON.stringify(process.env.TEST_ENV),
     },
-    __DEBUG__: parseInt(process.env.DEBUG, 10) === 1
+    DEBUG: parseInt(process.env.DEBUG, 10) === 1,
+    BASE: JSON.stringify(process.env.BASE) || '',
   },
-  ((pkg.buildjs || {}).config || {}).globals || {}
+  Object.keys(pkgGlobals).reduce((acc, k) => {
+    acc[k] = process.env[k] || pkgGlobals[k];
+    return acc;
+  }, {})
 ));
 
 // ------------------------------------
 // Utilities
 // ------------------------------------
 config.set('dependencies', pkg.dependencies);
-
+console.log(config);
 module.exports = config;

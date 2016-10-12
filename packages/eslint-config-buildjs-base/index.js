@@ -35,5 +35,8 @@ module.exports = {
     'better',
     'fp',
   ],
-  globals: config.globals,
+  globals: Object.keys(pkgGlobals).reduce((acc, k) => {
+    acc[k] = true;
+    return acc;
+  }, {}),
 };

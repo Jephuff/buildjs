@@ -1,7 +1,7 @@
 {
   "name": "@ncigdc/babel-plugins-buildjs",
   "description": "Babel Plugins used by BuildJS",
-  "version": "0.2.1",
+  "version": "0.2.3",
   "license": "Apache-2.0",
   "repository": "NCI-GDC/buildjs",
   "engines": {
@@ -9,7 +9,7 @@
   },
   "main": "index.js",
   "dependencies": {
-    "@ncigdc/buildjs-config": "^0.2.1",
+    "@ncigdc/buildjs-config": "^0.2.3",
     "babel-relay-plugin": "0.9.3",
     "chalk": "1.1.3"
   }

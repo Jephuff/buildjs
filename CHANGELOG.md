@@ -1,3 +1,9 @@
+## [0.2.3](https://github.com/nci-gdc/buildjs}/compare/v0.2.1...0.2.3) (2016-10-12)
+
+### :bug: Fixes
+
+- fix issues with globals ([78e4f90](https://github.com/nci-gdc/buildjs/commit/78e4f9044ba786054c1d7d04b30c0f518287ea39))
+
 ## [0.2.1](https://github.com/nci-gdc/buildjs}/compare/v0.2.0...0.2.1) (2016-10-12)
 
 ### :package: Refactor

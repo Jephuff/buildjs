@@ -1,2 +1,1 @@
-# BuildJS
-Javascript build system
+BuildJS

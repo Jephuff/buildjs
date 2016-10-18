@@ -20,10 +20,10 @@ const devServer = {
 
 module.exports = merge(merge(webpackConfig, {
   entry: {
+    // need to empty it first because webpack-merge will add them in the wrong order
     bundle: [],
   },
   plugins: [
-    new CaseSensitivePathsPlugin(),
     new webpack.HotModuleReplacementPlugin(),
   ],
   devServer,

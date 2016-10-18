@@ -64,5 +64,6 @@ module.exports = {
   },
   plugins: [
     new webpack.DefinePlugin(config.get('globals')),
+    new CaseSensitivePathsPlugin(),
   ],
 };

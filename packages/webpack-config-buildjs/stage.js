@@ -11,14 +11,13 @@ const LIBS_BUNDLE = 'libs';
 
 module.exports = merge(webpackConfig, {
   entry: {
-    [LIBS_BUNDLE]: config.get('dependencies'),
+    [LIBS_BUNDLE]: Object.keys(config.get('dependencies')),
   },
   output: {
     filename: '[name].[hash].js',
     chunkFilename: '[id].js',
   },
   plugins: [
-    ...webpackConfig.plugins,
     new webpack.optimize.CommonsChunkPlugin(LIBS_BUNDLE),
     new webpack.optimize.AggressiveMergingPlugin(),
     new HtmlWebpackPlugin({

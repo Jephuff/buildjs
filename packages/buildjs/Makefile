@@ -23,6 +23,7 @@ all: install lint test-once build
 
 .PHONY: server-stage
 server-stage: export NODE_ENV=stage
+server-stage: export BABEL_ENV=production
 server-stage: build docker-build docker-run
 
 .PHONY: server-prod
@@ -44,7 +45,8 @@ install:
 	@$(PRINT_OK)
 
 .PHONY: build
-build: export NODE_ENV ?= stage
+build: export NODE_ENV?=stage
+build: export BABEL_ENV=production
 build: clean-dist
 	@$(PRINT_ENV)
 	$(Q) webpack --config ${FDT_DIR}/bin/webpack.config.js

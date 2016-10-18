@@ -14,8 +14,8 @@
 1\. Tell Git who you are
 
 ```
-> git config --global user.name "Your Name"
-> git config --global user.email "example@address.com"
+git config --global user.name "Your Name"
+git config --global user.email "example@address.com"
 ```
 
 ### GPG Keys
@@ -25,7 +25,7 @@
 2\. Tell Git to use the `gpg2` that comes with `GPG Tools`
 
 ```
-> git config --global gpg.program /usr/local/MacGPG2/bin/gpg2
+git config --global gpg.program /usr/local/MacGPG2/bin/gpg2
 ```
 
 3\. Generate a GPG key using `Applications/GPG Keychain`
@@ -35,8 +35,8 @@
 4\. Tell Git to use your new GPG Key and auto-sign all commits
 
 ```
-> git config --global user.signingkey KEY_ID_FROM_STEP_3
-> git config --global commit.gpgsign true
+git config --global user.signingkey KEY_ID_FROM_STEP_3
+git config --global commit.gpgsign true
 ```
 
 5\. Add Keys to Github
@@ -72,7 +72,7 @@ The `next` branch should be considered the most up-to-date development version o
 All development should happen on a branch off of `next`. Branch names should include a ticket number if possible: `TICKET-##-couple-words` or `my-update`.
 
 ```
-❯ git checkout -b TICKET-11-my-feature
+git checkout -b TICKET-11-my-feature
 ```
 
 - Branches should be rebased with `next` if they get out of date.

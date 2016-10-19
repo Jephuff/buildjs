@@ -1,3 +1,7 @@
+## [0.2.5](https://github.com/nci-gdc/buildjs}/compare/v0.2.4...0.2.5) (2016-10-19)
+
+
+
 ## [0.2.4](https://github.com/nci-gdc/buildjs}/compare/v0.2.3...0.2.4) (2016-10-19)
 
 ### :bug: Fixes

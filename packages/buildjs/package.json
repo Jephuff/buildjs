@@ -11,8 +11,8 @@
   "dependencies": {
     "@ncigdc/babel-plugins-buildjs": "^0.2.3",
     "@ncigdc/babel-preset-buildjs": "^0.2.3",
-    "@ncigdc/eslint-config-buildjs-react": "^0.2.3",
     "@ncigdc/buildjs-config": "^0.2.3",
+    "@ncigdc/eslint-config-buildjs-react": "^0.2.3",
     "@ncigdc/jest-config-buildjs": "^0.2.3",
     "@ncigdc/webpack-config-buildjs": "^0.2.3",
     "babel-core": "6.16.0",
@@ -28,6 +28,7 @@
     "graphql": "0.7.1",
     "jest": "15.1.1",
     "listr": "0.6.1",
+    "listr-update-renderer": "^0.1.2",
     "npm-check": "5.2.3",
     "react": "15.3.2",
     "react-dom": "15.3.2",

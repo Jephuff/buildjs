@@ -2,7 +2,6 @@
   extends:
     - "@ncigdc/buildjs-node"
   rules:
-    no-unused-vars: 0
     no-console: 0
 
     fp/no-let: 0

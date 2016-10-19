@@ -1,21 +1,10 @@
-const path = require('path');
 const webpack = require('webpack');
 const findCacheDir = require('find-cache-dir');
+const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
 
 const config = require('@ncigdc/buildjs-config');
 
 module.exports = {
-  target: 'web',
-  devtool: '#source-map',
-  entry: {
-    bundle: [path.join(config.get('dir_packages'), 'root', 'index.js')],
-  },
-  output: {
-    path: path.join(config.get('dir_dist'), (config.get('globals').__BASE__ || ''), 'js'),
-    pathInfo: true,
-    publicPath: path.join('/', (config.get('globals').__BASE__ || ''), 'js/'),
-    filename: 'bundle.js',
-  },
   module: {
     preLoaders: [],
     loaders: [
@@ -28,8 +17,8 @@ module.exports = {
           babelrc: false,
           presets: ['@ncigdc/buildjs'],
           cacheDirectory: findCacheDir({
-            name: '@ncigdc/webpack-config-buildjs'
-          })
+            name: '@ncigdc/webpack-config-buildjs',
+          }),
         },
       },
       {

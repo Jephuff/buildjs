@@ -1,0 +1,21 @@
+{
+  "name": "@ncigdc/webpack-config-buildjs-app",
+  "description": "Webpack Config for Apps used by BuildJS",
+  "version": "0.2.3",
+  "license": "Apache-2.0",
+  "repository": "NCI-GDC/buildjs",
+  "engines": {
+    "node": ">=5"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "@ncigdc/webpack-config-buildjs-base": "^0.2.3",
+    "@ncigdc/buildjs-config": "^0.2.3",
+    "html-webpack-plugin": "2.22.0",
+    "react-hot-loader": "3.0.0-beta.2",
+    "webpack-hot-middleware": "2.12.2"
+  },
+  "peerDependencies": {
+    "react": "^15.0.0"
+  }
+}

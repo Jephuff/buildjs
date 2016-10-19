@@ -1,6 +1,6 @@
 PROJECT = "BuildJS"
 
-FDT_DIR ?= .
+export FDT_DIR ?= .
 PATH  := $(FDT_DIR)/node_modules/.bin:$(PATH)
 SHELL := /bin/bash
 

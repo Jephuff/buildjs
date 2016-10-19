@@ -1,6 +1,5 @@
 const webpack = require('webpack');
 const merge = require('webpack-merge');
-const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
 
 const config = require('@ncigdc/buildjs-config');
 const webpackConfig = require('./_base');

@@ -1,1 +1,1 @@
-module.exports = require('@ncigdc/webpack-config-buildjs');
+module.exports = require('@ncigdc/webpack-config-buildjs-app');

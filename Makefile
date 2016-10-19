@@ -24,6 +24,7 @@ all: install lint
 postinstall:
 	$(Q) mkdir -p node_modules/@ncigdc
 	$(Q) ln -s $(shell pwd)/packages/eslint-config-buildjs-node node_modules/@ncigdc/eslint-config-buildjs-node
+	$(Q) lerna bootstrap --yes
 	@$(PRINT_OK)
 
 .PHONY: lint
@@ -54,6 +55,10 @@ update:
 upgrade:
 	$(Q) npm-check -u
 	@$(PRINT_OK)
+
+.PHONY: publish
+publish:
+	$(Q) node packages/buildjs/bin/release/publish
 
 .PHONY: release
 release: export RELEASE=1

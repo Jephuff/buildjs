@@ -5,7 +5,7 @@ const gzipStatic = require('connect-gzip-static');
 const webpack = require('webpack');
 
 const config = require('@ncigdc/buildjs-config');
-const webpackConfig = require('@ncigdc/webpack-config-buildjs');
+const webpackConfig = require('@ncigdc/webpack-config-buildjs-app');
 
 const app = express();
 

@@ -1,10 +1,10 @@
 const path = require('path');
 const webpack = require('webpack');
 const merge = require('webpack-merge');
-const HtmlRemove = require('./plugins/html-remove');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const config = require('@ncigdc/buildjs-config');
+const HtmlRemove = require('@ncigdc/webpack-config-buildjs-base/plugins/html-remove');
 const webpackConfig = require('./_base');
 
 const LIBS_BUNDLE = 'libs';

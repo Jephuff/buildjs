@@ -1,3 +1,13 @@
+## [0.2.4](https://github.com/nci-gdc/buildjs}/compare/v0.2.3...0.2.4) (2016-10-19)
+
+### :bug: Fixes
+
+- fix webpack build ([b7edfd3](https://github.com/nci-gdc/buildjs/commit/b7edfd3e32e52a575102dfb31d743a313c3b5ead))
+
+### :books: Documentation
+
+- adds contributing guide ([08a3fda](https://github.com/nci-gdc/buildjs/commit/08a3fda4523f3770e83261ca8918d7722a5bc60c))
+
 ## [0.2.3](https://github.com/nci-gdc/buildjs}/compare/v0.2.1...0.2.3) (2016-10-12)
 
 ### :bug: Fixes

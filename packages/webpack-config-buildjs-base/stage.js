@@ -17,7 +17,7 @@ module.exports = {
           babelrc: false,
           presets: ['@ncigdc/buildjs'],
           cacheDirectory: findCacheDir({
-            name: '@ncigdc/webpack-config-buildjs',
+            name: '@ncigdc/webpack-config-buildjs-base',
           }),
         },
       },

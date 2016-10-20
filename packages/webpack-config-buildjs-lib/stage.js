@@ -1,12 +1,13 @@
-const path = require('path');
 const merge = require('webpack-merge');
-const config = require('@ncigdc/buildjs-config');
 const webpackConfig = require('@ncigdc/webpack-config-buildjs-base');
 
 module.exports = merge(webpackConfig, {
-  target: 'library',
+  entry: {
+    bundle: './index.js',
+  },
   output: {
-    library: process.env.LIBRARY
+    filename: `umd/${process.env.LIBRARY}.js`,
+    library: process.env.LIBRARY,
     libraryTarget: 'umd',
   },
 });

@@ -52,6 +52,14 @@ build: clean-dist
 	$(Q) webpack --config ${FDT_DIR}/bin/webpack.config.js
 	@$(PRINT_OK)
 
+.PHONY: build-umd
+build-umd: export NODE_ENV?=stage
+build-umd: export BABEL_ENV=production
+build-umd: clean-dist
+	@$(PRINT_ENV)
+	$(Q) webpack --config ${FDT_DIR}/bin/webpack.lib.config.js
+	@$(PRINT_OK)
+
 .PHONY: test-watch
 test-watch: export TEST_ENV=watch
 test-watch: test

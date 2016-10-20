@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "buildjs",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "repository": "NCI-GDC/buildjs",
   "dependencies": {},
   "devDependencies": {

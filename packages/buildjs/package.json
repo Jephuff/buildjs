@@ -1,7 +1,7 @@
 {
   "name": "@ncigdc/buildjs",
   "description": "Hands Off Bbuild System for Relay/React",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "license": "Apache-2.0",
   "repository": "NCI-GDC/buildjs",
   "engines": {

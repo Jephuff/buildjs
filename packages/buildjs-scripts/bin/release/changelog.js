@@ -18,7 +18,7 @@ const emojiMapping = Object.assign({}, {
   bug: 'Fixes',
   books: 'Documentation',
   racehorse: 'Performance',
-  package: 'Refactor',
+  globe_with_meridians: 'Internationalization',
 }, (pkg.buildjs || {}).emojiMapping || {});
 
 const formatLines = (line, pr) => {
@@ -100,7 +100,7 @@ const tasks = new Listr([
       try {
         const data = fs.readFileSync(CL, 'utf-8');
 
-        const title = `[${process.env.NEXT_VERSION}](${REPO_URL}}/compare/${FROM_TAG}...${process.env.NEXT_VERSION})`;
+        const title = `[${process.env.NEXT_VERSION}](${REPO_URL}/compare/v${FROM_TAG}...v${process.env.NEXT_VERSION})`;
         const nextChangelog = `## ${title} (${dateFormat(new Date(), 'yyyy-mm-dd', true)})\n\n${LOGS}\n\n${data}`;
 
         fs.writeFile(CL, nextChangelog, 'utf-8');

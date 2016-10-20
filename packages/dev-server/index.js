@@ -1,3 +1,3 @@
-import webpackConfig from './webpack.config';
+const webpackConfig = require('./webpack.config');
 
 module.exports = webpackConfig;

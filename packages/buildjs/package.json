@@ -7,6 +7,9 @@
   "engines": {
     "node": ">=5"
   },
+  "files": [
+    "umd"
+  ],
   "main": "index.js",
   "dependencies": {
     "@ncigdc/babel-plugins-buildjs": "^0.2.5",

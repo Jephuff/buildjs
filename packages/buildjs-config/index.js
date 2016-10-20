@@ -58,6 +58,6 @@ config.set('globals', Object.assign(
 // ------------------------------------
 // Utilities
 // ------------------------------------
-config.set('dependencies', pkg.dependencies);
+config.set('dependencies', pkg.dependencies || {});
 
 module.exports = config;

@@ -1,9 +1,8 @@
-const path = require('path');
 const readPkgUp = require('read-pkg-up');
 
 const pkg = readPkgUp.sync().pkg;
 
-const relayPlugin = !!pkg.dependencies['react-relay']
+const relayPlugin = !!(pkg.dependencies || {})['react-relay']
   ? [require('@ncigdc/babel-plugins-buildjs/relay')]
   : [];
 

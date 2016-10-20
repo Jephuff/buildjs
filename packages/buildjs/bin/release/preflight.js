@@ -78,7 +78,7 @@ const gitChecks = new Listr([
   {
     title: 'Check git tag existence',
     task: () => execa('git', ['fetch'])
-    .then(() => execa.stdout('git', ['rev-parse', '--quiet', '--verify', `refs/tags/${process.env.NEXT_VERSION}`]))
+    .then(() => execa.stdout('git', ['rev-parse', '--quiet', '--verify', `refs/tags/v${process.env.NEXT_VERSION}`]))
     .then(
       output => {
         if (output) {

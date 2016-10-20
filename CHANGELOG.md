@@ -1,3 +1,9 @@
+## [0.3.1](https://github.com/nci-gdc/buildjs}/compare/v0.3.0...0.3.1) (2016-10-20)
+
+### :bug: Fixes
+
+- fix deploy issues ([cddc1eb](https://github.com/nci-gdc/buildjs/commit/cddc1ebfec1246c6e9e9d17725ee266b1db7a0de))
+
 ## [0.3.0](https://github.com/nci-gdc/buildjs}/compare/v0.2.5...0.3.0) (2016-10-20)
 
 ### :bug: Fixes

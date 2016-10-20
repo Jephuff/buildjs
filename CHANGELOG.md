@@ -1,3 +1,9 @@
+## [0.3.7](https://github.com/nci-gdc/buildjs}/compare/v0.3.6...0.3.7) (2016-10-20)
+
+### :sparkles: Features
+
+- add peerDeps as externs in lib build ([d0906f4](https://github.com/nci-gdc/buildjs/commit/d0906f4e1f99246d584b989ce5e039f93bfcc1fe))
+
 ## [0.3.6](https://github.com/nci-gdc/buildjs}/compare/v0.3.5...0.3.6) (2016-10-20)
 
 ### :bug: Fixes

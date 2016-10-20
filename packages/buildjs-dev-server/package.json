@@ -1,6 +1,6 @@
 {
-  "name": "@ncigdc/dev-server",
-  "description": "Dev Server",
+  "name": "@ncigdc/buildjs-dev-server",
+  "description": "Dev Server used by BuildJS",
   "version": "0.3.1",
   "license": "Apache-2.0",
   "repository": "NCI-GDC/buildjs",

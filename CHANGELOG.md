@@ -1,3 +1,9 @@
+## [0.3.6](https://github.com/nci-gdc/buildjs}/compare/v0.3.5...0.3.6) (2016-10-20)
+
+### :bug: Fixes
+
+- fix bug with changelog script ([6dc6485](https://github.com/nci-gdc/buildjs/commit/6dc64857ec84d9e43b1fb59a044a7020730fe24a))
+
 ## [0.3.5](https://github.com/nci-gdc/buildjs}/compare/v0.3.3...0.3.5) (2016-10-20)
 
 ### :bug: Fixes

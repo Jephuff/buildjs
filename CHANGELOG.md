@@ -1,3 +1,9 @@
+## [0.3.5](https://github.com/nci-gdc/buildjs}/compare/v0.3.3...0.3.5) (2016-10-20)
+
+### :bug: Fixes
+
+- fix bug with empty dependencies ([cbb383e](https://github.com/nci-gdc/buildjs/commit/cbb383e100be859a1b2a4fe5884f8c7c14047a9d))
+
 ## [0.3.3](https://github.com/nci-gdc/buildjs}/compare/v0.3.2...0.3.3) (2016-10-20)
 
 ### :bug: Fixes

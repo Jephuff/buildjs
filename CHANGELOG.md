@@ -1,3 +1,9 @@
+## [0.3.8](https://github.com/nci-gdc/buildjs}/compare/v0.3.7...0.3.8) (2016-10-20)
+
+### :sparkles: Features
+
+- better umd transform for libs ([19fafd0](https://github.com/nci-gdc/buildjs/commit/19fafd076bb51375f75c3f1f4c70d33e7fda8500))
+
 ## [0.3.7](https://github.com/nci-gdc/buildjs}/compare/v0.3.6...0.3.7) (2016-10-20)
 
 ### :sparkles: Features

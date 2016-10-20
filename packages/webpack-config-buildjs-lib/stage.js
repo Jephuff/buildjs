@@ -10,4 +10,10 @@ module.exports = merge(webpackConfig, {
     library: process.env.LIBRARY,
     libraryTarget: 'umd',
   },
+  module: {
+    loaders: webpackConfig.module.loaders.map(l => {
+      delete l.include; //eslint-disable-line
+      return l;
+    }),
+  },
 });

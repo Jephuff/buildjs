@@ -11,7 +11,6 @@ module.exports = {
       {
         test: /\.js?$/,
         loader: 'babel',
-        exclude: ['node_modules'],
         include: `${config.get('dir_packages')}`,
         query: {
           babelrc: false,

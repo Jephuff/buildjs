@@ -1,7 +1,7 @@
 {
   "name": "@ncigdc/webpack-config-buildjs-base",
   "description": "Webpack Config used by BuildJS",
-  "version": "0.2.5",
+  "version": "0.3.0",
   "license": "Apache-2.0",
   "repository": "NCI-GDC/buildjs",
   "engines": {

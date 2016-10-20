@@ -1,7 +1,7 @@
 {
   "name": "@ncigdc/dev-server",
   "description": "Dev Server",
-  "version": "0.2.5",
+  "version": "0.3.0",
   "license": "Apache-2.0",
   "repository": "NCI-GDC/buildjs",
   "engines": {
@@ -10,7 +10,7 @@
   "main": "index.js",
   "dependencies": {
     "@ncigdc/buildjs-config": "^0.2.5",
-    "@ncigdc/webpack-config-buildjs-app": "^0.2.5",
+    "@ncigdc/webpack-config-buildjs-app": "^0.3.0",
     "babel-loader": "6.2.5",
     "html-webpack-plugin": "^2.22.0",
     "react-hot-loader": "3.0.0-beta.2",

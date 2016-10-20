@@ -8,6 +8,7 @@ const relayPlugin = !!(pkg.dependencies || {})['react-relay']
 
 let plugins = [
   'transform-export-extensions',
+  'add-module-exports',
 ];
 
 const testPlugins = [
@@ -62,4 +63,3 @@ module.exports = {
   ],
   plugins,
 };
-

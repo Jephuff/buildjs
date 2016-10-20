@@ -59,5 +59,6 @@ config.set('globals', Object.assign(
 // Utilities
 // ------------------------------------
 config.set('dependencies', pkg.dependencies || {});
+config.set('peerDependencies', pkg.peerDependencies || {});
 
 module.exports = config;

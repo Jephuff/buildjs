@@ -1,3 +1,9 @@
+## [0.3.3](https://github.com/nci-gdc/buildjs}/compare/v0.3.2...0.3.3) (2016-10-20)
+
+### :bug: Fixes
+
+- fix loaders for libs ([7b2a684](https://github.com/nci-gdc/buildjs/commit/7b2a68414805c9c1e59256eb5a0e7f1b4a16d5a4))
+
 ## [0.3.2](https://github.com/nci-gdc/buildjs}/compare/v0.3.1...0.3.2) (2016-10-20)
 
 

@@ -32,6 +32,7 @@ module.exports = merge(merge(webpackConfig, {
   entry: {
     bundle: [
       // Order matters here
+      // this might have to change
       'react-hot-loader/patch',
       'webpack-hot-middleware/client?reload=true',
       ...webpackConfig.entry.bundle,

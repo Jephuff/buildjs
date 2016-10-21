@@ -1,6 +1,8 @@
 const execa = require('execa');
 const Listr = require('listr');
 
+const utils = require('../utils');
+
 const tasks = new Listr([
   {
     title: 'Bump Package Version',
@@ -11,7 +13,5 @@ const tasks = new Listr([
 module.exports = tasks;
 
 if (!process.env.RELEASE) {
-  tasks.run().catch(err => {
-    console.error(err.message);
-  });
+  tasks.run().catch(utils.catchErrors);
 }

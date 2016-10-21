@@ -5,6 +5,8 @@ const readPkgUp = require('read-pkg-up');
 const dateFormat = require('dateformat');
 const config = require('@ncigdc/buildjs-config');
 
+const utils = require('../utils');
+
 const pkg = readPkgUp.sync().pkg;
 
 const REPO_URL = pkg.repository.url.replace(/^git\+/, '').replace(/\.git$/, '');
@@ -97,16 +99,12 @@ const tasks = new Listr([
     title: 'Appending new changes',
     task: () => {
       const CL = `${config.get('path_project')}/CHANGELOG.md`;
-      try {
-        const data = fs.readFileSync(CL, 'utf-8');
+      const data = fs.readFileSync(CL, 'utf-8');
 
-        const title = `[${process.env.NEXT_VERSION}](${REPO_URL}/compare/v${FROM_TAG}...v${process.env.NEXT_VERSION})`;
-        const nextChangelog = `## ${title} (${dateFormat(new Date(), 'yyyy-mm-dd', true)})\n\n${LOGS}\n\n${data}`;
+      const title = `[${process.env.NEXT_VERSION}](${REPO_URL}/compare/v${FROM_TAG}...v${process.env.NEXT_VERSION})`;
+      const nextChangelog = `## ${title} (${dateFormat(new Date(), 'yyyy-mm-dd', true)})\n\n${LOGS}\n\n${data}`;
 
-        fs.writeFile(CL, nextChangelog, 'utf-8');
-      } catch (err) {
-        throw err;
-      }
+      fs.writeFile(CL, nextChangelog, 'utf-8');
     },
   },
 ]);
@@ -114,7 +112,5 @@ const tasks = new Listr([
 module.exports = tasks;
 
 if (!process.env.RELEASE) {
-  tasks.run().catch(err => {
-    console.error(err.message);
-  });
+  tasks.run().catch(utils.catchErrors);
 }

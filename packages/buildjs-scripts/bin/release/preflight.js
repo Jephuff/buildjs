@@ -3,6 +3,8 @@ const execa = require('execa');
 const Listr = require('listr');
 const readPkgUp = require('read-pkg-up');
 
+const utils = require('../utils');
+
 const pkg = readPkgUp.sync().pkg;
 
 const npmChecks = new Listr([
@@ -123,7 +125,5 @@ const tasks = new Listr([
 module.exports = tasks;
 
 if (!process.env.RELEASE) {
-  tasks.run().catch(err => {
-    console.error(err.message);
-  });
+  tasks.run().catch(utils.catchErrors);
 }

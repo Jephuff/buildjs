@@ -1,3 +1,10 @@
+## [0.3.9](https://github.com/nci-gdc/buildjs}/compare/v0.3.8...0.3.9) (2016-10-21)
+
+### :sparkles: Features
+
+- better error messages in scripts ([f4e23af](https://github.com/nci-gdc/buildjs/commit/f4e23afb60a12a7a7d8876b4c1fdd7c90feab4e1))
+- add umd build to publish ([2a1a0c1](https://github.com/nci-gdc/buildjs/commit/2a1a0c1a5248fbd4e0e76c4aa347e6fe1eba7bbc))
+
 ## [0.3.8](https://github.com/nci-gdc/buildjs}/compare/v0.3.7...0.3.8) (2016-10-20)
 
 ### :sparkles: Features

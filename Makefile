@@ -58,9 +58,9 @@ upgrade:
 
 .PHONY: publish
 publish:
-	$(Q) node packages/buildjs/bin/release/publish
+	$(Q) node packages/buildjs-scripts/bin/release/publish
 
 .PHONY: release
 release: export RELEASE=1
 release:
-	$(Q) node packages/buildjs/bin/release/release
+	$(Q) node packages/buildjs-scripts/bin/release/release

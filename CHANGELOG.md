@@ -1,3 +1,9 @@
+## [0.3.10](https://github.com/nci-gdc/buildjs}/compare/v0.3.9...0.3.10) (2016-10-21)
+
+### :bug: Fixes
+
+- fix typos in publish and webpack lib ([615ba3d](https://github.com/nci-gdc/buildjs/commit/615ba3d138b4d6235db36e5508fe4d48bb8c92de))
+
 ## [0.3.9](https://github.com/nci-gdc/buildjs}/compare/v0.3.8...0.3.9) (2016-10-21)
 
 ### :sparkles: Features

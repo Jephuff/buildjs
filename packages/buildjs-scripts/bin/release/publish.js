@@ -18,7 +18,7 @@ const tasks = new Listr([
           title: `Building umd for ${d}`,
           skip: () => pkg.private || !pkg.browser,
           task: () => execa('webpack', [
-            `./${config.get('dir_packages')}/${d}/${pkg.main}`,
+            `${config.get('dir_packages')}/${d}/${pkg.main}`,
             `${config.get('dir_packages')}/${d}/umd/${pkg.browser}`,
             '--config', 'node_modules/@ncigdc/webpack-config-buildjs-lib',
             '--output-library', upperCamelCase(d),

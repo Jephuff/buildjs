@@ -6,7 +6,7 @@ module.exports = merge(webpackConfig, {
   output: {
     libraryTarget: 'umd',
   },
-  externals: Object.keys(config.get('peerDependencies'))
+  externals: Object.keys(config.get('peerDependencies')),
   module: {
     loaders: webpackConfig.module.loaders.map(l => {
       delete l.include; //eslint-disable-line

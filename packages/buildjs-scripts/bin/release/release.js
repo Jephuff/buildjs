@@ -1,5 +1,7 @@
 const Listr = require('listr');
 
+const utils = require('../utils');
+
 const tasks = new Listr([
   {
     title: 'Preflight',

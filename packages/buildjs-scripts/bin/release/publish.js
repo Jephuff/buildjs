@@ -12,17 +12,23 @@ const tasks = new Listr([
     title: 'Building umd',
     task: () => {
       const modifiedPkgs = utils.findPackagesToBump();
+
       return new Listr(modifiedPkgs.map(d => {
         const pkg = utils.findPackagePkg(d);
+
         return {
           title: `Building umd for ${d}`,
           skip: () => pkg.private || !pkg.browser,
           task: () => execa('webpack', [
             `${config.get('dir_packages')}/${d}/${pkg.main}`,
-            `${config.get('dir_packages')}/${d}/umd/${pkg.browser}`,
+            `${config.get('dir_packages')}/${d}/${pkg.browser}`,
             '--config', 'node_modules/@ncigdc/webpack-config-buildjs-lib',
             '--output-library', upperCamelCase(d),
-          ]),
+          ], {
+            env: Object.assign({}, process.env, {
+              PEER: JSON.stringify(pkg.peerDependencies),
+            }),
+          }),
         };
       }));
     },

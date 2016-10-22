@@ -3,7 +3,7 @@ const chalk = require('chalk');
 const fs = require('graceful-fs');
 const config = require('@ncigdc/buildjs-config');
 
-const findPackagePkg = (d) => require(`${config.get('dir_packages')}/${d}/package.json`)
+const findPackagePkg = (d) => require(`${config.get('dir_packages')}/${d}/package.json`);
 
 const findPackageDirs = () => {
   const dirs = fs.readdirSync(config.get('dir_packages'));
@@ -49,12 +49,14 @@ const findPackagesToBump = (o) => {
 
 const catchErrors = err => {
   if (err.cmd) {
-    console.log();
     console.log(chalk.bgBlue.white(' COMMAND '));
     console.log(chalk.white(err.cmd));
     console.log();
     console.log(chalk.bgRed.white(' ERROR '));
-    console.log(chalk.white(err.stderr.split('\n')[0]));
+    if (err.stderr) {
+      console.log(chalk.white(err.stderr.split('\n    at')[0]));
+    }
+    console.log(chalk.white(err.stdout.split('\n    at')[0]));
   } else {
     const PrettyError = require('pretty-error');
 

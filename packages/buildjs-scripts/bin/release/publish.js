@@ -6,12 +6,21 @@ const Listr = require('listr');
 const config = require('@ncigdc/buildjs-config');
 
 const utils = require('../utils');
+let FROM_TAG;
 
 const tasks = new Listr([
   {
+    title: 'Finding latest tag',
+    task: () => execa.stdout('git', ['describe', '--abbrev=0', '--tags']).then(tag => {
+      FROM_TAG = tag;
+    }).catch(err => execa.stdout('git', ['rev-list', '--max-parents=0', 'HEAD']).then(commit => {
+      FROM_TAG = commit;
+    })),
+  },
+  {
     title: 'Building umd',
     task: () => {
-      const modifiedPkgs = utils.findPackagesToBump();
+      const modifiedPkgs = utils.findPackagesToBump(FROM_TAG);
 
       return new Listr(modifiedPkgs.map(d => {
         const pkg = utils.findPackagePkg(d);

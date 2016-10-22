@@ -11,8 +11,8 @@ const findPackageDirs = () => {
   return dirs;
 };
 
-const findModifiedPackageDirs = () => {
-  const output = execa.sync('git', ['diff', '--cached', '--dirstat=files,0', '--', 'packages']);
+const findModifiedPackageDirs = (tag) => {
+  const output = execa.sync('git', ['diff', '--dirstat=files,0', tag, '--', 'packages']);
   const lines = output.stdout.split('\n');
   const modifiedPackageDirs = lines.map(l => l.split('/')[1]);
 
@@ -27,13 +27,14 @@ const findPackageNames = (dirs) => {
   return packageNames;
 };
 
-const findPackagesToBump = (o) => {
-  const pkgMap = o || findPackageNames(findModifiedPackageDirs());
+const findPackagesToBump = (tag) => {
+  const pkgMap = findPackageNames(findModifiedPackageDirs(tag));
 
   const modifiedDirs = Object.keys(pkgMap);
   const modifiedPkgs = Object.keys(pkgMap).map(k => pkgMap[k]);
 
   const dirs = findPackageDirs();
+
   const modifiedPackageDirs = dirs.reduce((acc, dir) => {
     const deps = Object.keys(findPackagePkg(dir).dependencies || {});
 

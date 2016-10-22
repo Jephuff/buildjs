@@ -1,3 +1,15 @@
+## [0.3.11](https://github.com/nci-gdc/buildjs/compare/vv0.3.10...v0.3.11) (2016-10-22)
+
+### :bug: Fixes
+
+- skip package if missing pkg.json ([37d3293](https://github.com/nci-gdc/buildjs/commit/37d32937b714418d431ae1139e1d047677ff7d00))
+- fix bug when finding modified packages ([c2fe2b2](https://github.com/nci-gdc/buildjs/commit/c2fe2b268e9d3a18ddfce518f18b21a55a02cc04))
+- fix missing dep in release script ([fda5dad](https://github.com/nci-gdc/buildjs/commit/fda5dad5fc8120a19e128c774b051e6247f74a63))
+
+### :sparkles: Features
+
+- add peerDeps as external deps ([73175b8](https://github.com/nci-gdc/buildjs/commit/73175b87b0e310789338ba5ca4434dc18a303bff))
+
 ## [0.3.10](https://github.com/nci-gdc/buildjs}/compare/v0.3.9...0.3.10) (2016-10-21)
 
 ### :bug: Fixes

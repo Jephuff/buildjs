@@ -1,7 +1,7 @@
 {
   "name": "@ncigdc/webpack-config-buildjs-base",
   "description": "Webpack Config used by BuildJS",
-  "version": "0.3.8",
+  "version": "0.3.11",
   "license": "Apache-2.0",
   "repository": "NCI-GDC/buildjs",
   "engines": {
@@ -9,8 +9,8 @@
   },
   "main": "index.js",
   "dependencies": {
-    "@ncigdc/babel-preset-buildjs": "^0.3.8",
-    "@ncigdc/buildjs-config": "^0.3.7",
+    "@ncigdc/babel-preset-buildjs": "^0.3.11",
+    "@ncigdc/buildjs-config": "^0.3.11",
     "babel-core": "6.16.0",
     "babel-loader": "6.2.5",
     "case-sensitive-paths-webpack-plugin": "1.1.4",

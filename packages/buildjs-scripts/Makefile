@@ -188,6 +188,7 @@ publish:
 	$(Q) node ${FDT_DIR}-scripts/bin/release/publish
 
 .PHONY: release
+release: export NODE_ENV?=production
 release: export RELEASE=1
 release:
 	$(Q) node ${FDT_DIR}-scripts/bin/release/release

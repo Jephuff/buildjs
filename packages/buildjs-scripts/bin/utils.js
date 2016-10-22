@@ -43,6 +43,8 @@ const findPackagesToBump = (tag) => {
   const dirs = findPackageDirs();
 
   const modifiedPackageDirs = dirs.reduce((acc, dir) => {
+    if (acc.includes(dir)) return acc;
+
     const deps = Object.keys(findPackagePkg(dir).dependencies || {});
 
     if (deps.some(dep => modifiedPkgs.includes(dep))) {

@@ -10,7 +10,7 @@ const eslintrc = {
     'no-duplicate-imports': 0,
 
     // ###  import
-    'import/no-duplicates': "error",
+    'import/no-duplicates': 'error',
     // our src modules are in node_modules but not package.json
     'import/no-extraneous-dependencies': 0,
     // I just found these two kind of annoying
@@ -35,10 +35,11 @@ const eslintrc = {
     'better',
     'fp',
   ],
-  globals: Object.keys(config.get('globals')).reduce((acc, k) => {
-    acc[k] = true;
-    return acc;
-  }, {}),
+  globals: Object.keys(config.get('globals')).reduce((acc, k) => (
+    Object.assign({}, acc, {
+      [k]: true,
+    })
+  ), {}),
 };
 
 module.exports = eslintrc;

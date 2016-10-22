@@ -3,6 +3,7 @@
     - "@ncigdc/buildjs-node"
   rules:
     no-console: 0
+    max-len: 0
 
     fp/no-let: 0
     fp/no-mutation: 0

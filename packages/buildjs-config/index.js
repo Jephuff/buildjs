@@ -49,10 +49,11 @@ config.set('globals', Object.assign(
     DEBUG: parseInt(process.env.DEBUG, 10) === 1,
     BASE: JSON.stringify(process.env.BASE) || '',
   },
-  Object.keys(pkgGlobals).reduce((acc, k) => {
-    acc[k] = JSON.stringify(process.env[k] || pkgGlobals[k]);
-    return acc;
-  }, {})
+  Object.keys(pkgGlobals).reduce((acc, k) => (
+    Object.assign({}, acc, {
+      [k]: JSON.stringify(process.env[k] || pkgGlobals[k]),
+    })
+  ), {})
 ));
 
 // ------------------------------------

@@ -13,7 +13,7 @@ module.exports = () => {
     },
     scriptPreprocessor: path.resolve(__dirname, 'transform.js'),
     testEnvironment: 'jsdom',
-    testPathDirs: [config.get('dir_packages')]
+    testPathDirs: [config.get('dir_packages')],
   };
 
   return jestConfig;

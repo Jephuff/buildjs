@@ -52,7 +52,7 @@ const tasks = new Listr([
             skip: () => FROM_TAG,
             task: () => execa.stdout('git', ['describe', '--abbrev=0', '--tags']).then(tag => {
               FROM_TAG = tag;
-            }).catch(err => execa.stdout('git', ['rev-list', '--max-parents=0', 'HEAD']).then(commit => {
+            }).catch(() => execa.stdout('git', ['rev-list', '--max-parents=0', 'HEAD']).then(commit => {
               FROM_TAG = commit;
             })),
           },
@@ -77,7 +77,7 @@ const tasks = new Listr([
 
         if (!match || !emojiMapping[match[2]]) return acc;
 
-        const [_0, _1, type, emojis, _4, tickets, title, _7, pr] = match;
+        const [_0, _1, type, emojis, _4, tickets, title, _7, pr] = match; // eslint-disable-line no-unused-vars
 
         const line = {
           title,

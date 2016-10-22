@@ -3,7 +3,14 @@ const chalk = require('chalk');
 const fs = require('graceful-fs');
 const config = require('@ncigdc/buildjs-config');
 
-const findPackagePkg = (d) => require(`${config.get('dir_packages')}/${d}/package.json`);
+const findPackagePkg = (d) => {
+  try {
+    const pkg = require(`${config.get('dir_packages')}/${d}/package.json`);
+    return pkg;
+  } catch (err) {
+    return {};
+  }
+};
 
 const findPackageDirs = () => {
   const dirs = fs.readdirSync(config.get('dir_packages'));

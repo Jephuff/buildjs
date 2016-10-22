@@ -1,3 +1,9 @@
+## [0.3.12](https://github.com/nci-gdc/buildjs/compare/vv0.3.11...v0.3.12) (2016-10-22)
+
+### :bug: Fixes
+
+- don't add modified dir twice ([31f4b03](https://github.com/nci-gdc/buildjs/commit/31f4b034e22ba8d619200063fbe3ab012b36ef34))
+
 ## [0.3.11](https://github.com/nci-gdc/buildjs/compare/vv0.3.10...v0.3.11) (2016-10-22)
 
 ### :bug: Fixes

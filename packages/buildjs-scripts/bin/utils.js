@@ -24,19 +24,19 @@ const getDependencyVersion = (dep, topDeps, localPkgs, modifiedPkgs, dir) => {
   else if (localPkgsNames.includes(dep)) {
     const pkg = findPackagePkg(path.join(config.get('dir_packages'), dir));
     return pkg.version;
-  } else {
-    return topDeps[dep];
   }
-}
+
+  return topDeps[dep];
+};
 
 const updatePkgDeps = ({ pkg, topPkg, deps, localPkgs, modifiedPkgs, dir }) => (
   Object.assign({},
     pkg,
     {
-      main: "lib/index.js",
-      "jsnext:main": "es6/index.js",
-      browser: `umd/${dir}.min.js`,
-      files: ["*.md", "docs", "es", "lib", "umd"],
+      main: 'lib/index.js',
+      'jsnext:main': 'es6/index.js',
+      browser: topPkg.browser ? `umd/${dir}.min.js` : false,
+      files: ['*.md', 'docs', 'es', 'lib', 'umd'],
       repository: topPkg.repository,
       engines: topPkg.engines,
       author: topPkg.author,
@@ -49,15 +49,15 @@ const updatePkgDeps = ({ pkg, topPkg, deps, localPkgs, modifiedPkgs, dir }) => (
         !Object.keys(topPkg.peerDependencies || {}).includes(d)
       )).reduce((acc, d) => {
         return Object.assign(acc, {
-          [d]: getDependencyVersion(d, topPkg.dependencies, localPkgs, modifiedPkgs, dir)
-        })
+          [d]: getDependencyVersion(d, topPkg.dependencies, localPkgs, modifiedPkgs, dir),
+        });
       }, {}),
       peerDependencies: deps.filter(d => (
         Object.keys(topPkg.peerDependencies || {}).includes(d)
       )).reduce((acc, d) => {
         return Object.assign(acc, {
           [d]: parseInt(topPkg.dependencies[d], 10).toString(),
-        })
+        });
       }, {}),
     }
   )
@@ -135,6 +135,8 @@ const catchErrors = (err) => {
     console.log(pe.render(err));
   }
 };
+
+findDeps('/Users/swilson/Documents/Development/gdc/buildjs/packages/webpack-config-buildjs-base').then(data => console.log(data));
 
 module.exports = {
   findDeps,

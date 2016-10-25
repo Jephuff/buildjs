@@ -80,14 +80,14 @@ const tasks = new Listr([
       }));
     },
   },
-  {
-    title: 'Staging Changes',
-    task: () => execa('git', ['add', '.']),
-  },
-  {
-    title: 'Lerna Cross Package Publish',
-    task: () => execa('lerna', ['publish', '--repo-version', process.env.NEXT_VERSION, '--yes']),
-  },
+  // {
+  //   title: 'Staging Changes',
+  //   task: () => execa('git', ['add', '.']),
+  // },
+  // {
+  //   title: 'Lerna Cross Package Publish',
+  //   task: () => execa('lerna', ['publish', '--repo-version', process.env.NEXT_VERSION, '--yes']),
+  // },
 ], {
   renderer: UpdaterRenderer,
   collapse: false,

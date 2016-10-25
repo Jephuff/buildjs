@@ -3,12 +3,11 @@
   "name": "buildjs",
   "version": "0.3.12",
   "repository": "NCI-GDC/buildjs",
-  "dependencies": {},
   "peerDependencies": {
     "eslint": "*",
     "react": "*"
   },
-  "devDependencies": {
+  "dependencies": {
     "babel-core": "6.16.0",
     "babel-eslint": "7.0.0",
     "babel-jest": "16.0.0",
@@ -57,9 +56,9 @@
     "webpack": "2.1.0-beta.13",
     "webpack-dev-server": "2.1.0-beta.9",
     "webpack-hot-middleware": "2.12.2",
-    "webpack-merge": "0.14.1"
+    "webpack-merge": "0.14.1",
+    "write-pkg": "2.0.0"
   },
   "scripts": {
-    "postinstall": "make postinstall"
   }
 }

@@ -1,7 +1,9 @@
+const path = require('path');
 const execa = require('execa');
 const upperCamelCase = require('uppercamelcase');
 const UpdaterRenderer = require('listr-update-renderer');
 const Listr = require('listr');
+const writePkg = require('write-pkg');
 
 const config = require('@ncigdc/buildjs-config');
 
@@ -17,6 +19,41 @@ const tasks = new Listr([
     }).catch(() => execa.stdout('git', ['rev-list', '--max-parents=0', 'HEAD']).then(commit => {
       FROM_TAG = commit;
     })),
+  },
+  {
+    title: 'Finding dependencies and updating package.json',
+    task: () => {
+      const pkgs = utils.findPackageDirs();
+      const localPkgs = utils.findPackageNames(pkgs);
+      const modifiedPkgs = utils.findPackagesToBump(FROM_TAG);
+
+      return new Listr(modifiedPkgs.map(dir => {
+        const topPkg = utils.findPackagePkg(config.get('path_project'));
+        const pkg = utils.findPackagePkg(path.join(config.get('dir_packages'), dir));
+
+        return {
+          title: `Updating package.json for ${dir}`,
+          skip: () => pkg.private,
+          task: () => utils.findDeps(
+            path.join(config.get('dir_packages'), dir)
+          ).then(deps => (
+            utils.updatePkgDeps({
+              pkg,
+              topPkg,
+              deps,
+              localPkgs,
+              modifiedPkgs,
+              dir,
+            })
+          )).then(pkgObj => {
+            writePkg(
+              path.join(config.get('dir_packages'), dir),
+              pkgObj
+            );
+          }),
+        };
+      }));
+    },
   },
   {
     title: 'Building umd',

@@ -20,12 +20,10 @@ PRINT_ENV = printf "$@ $(NODE_ENV_STRING)\n" | $(AWK_CMD)
 all: install lint
 .PHONY: all
 
-.PHONY: postinstall
-postinstall:
-	$(Q) mkdir -p node_modules/@ncigdc
-	$(Q) ln -s $(shell pwd)/packages/eslint-config-buildjs-node node_modules/@ncigdc/eslint-config-buildjs-node
-	$(Q) lerna bootstrap --yes
-	@$(PRINT_OK)
+.PHONY: server
+server: export NODE_ENV=development
+server:
+	$(Q) node packages/node_modules/@ncigdc/buildjs-dev-server
 
 .PHONY: lint
 lint:

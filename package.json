@@ -7,6 +7,10 @@
     "eslint": "*",
     "react": "*"
   },
+  "devDependencies": {
+    "@ncigdc/eslint-config-buildjs-node": "*",
+    "@ncigdc/eslint-config-buildjs-base": "*"
+  },
   "dependencies": {
     "babel-core": "6.16.0",
     "babel-eslint": "7.0.0",

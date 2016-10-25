@@ -1,17 +1,5 @@
 {
   "name": "@ncigdc/buildjs",
   "description": "Hands Off Bbuild System for Relay/React",
-  "version": "0.3.11",
-  "license": "Apache-2.0",
-  "repository": "NCI-GDC/buildjs",
-  "engines": {
-    "node": ">=5"
-  },
-  "dependencies": {
-    "@ncigdc/babel-preset-buildjs": "^0.3.11",
-    "@ncigdc/buildjs-config": "^0.3.11",
-    "execa": "0.4.0",
-    "listr": "0.6.1",
-    "listr-update-renderer": "^0.1.2"
-  }
+  "version": "0.3.11"
 }

@@ -1,20 +1,5 @@
 {
   "name": "@ncigdc/buildjs-dev-server",
   "description": "Dev Server used by BuildJS",
-  "version": "0.3.11",
-  "license": "Apache-2.0",
-  "repository": "NCI-GDC/buildjs",
-  "engines": {
-    "node": ">=5"
-  },
-  "main": "index.js",
-  "dependencies": {
-    "@ncigdc/buildjs-config": "^0.3.11",
-    "@ncigdc/webpack-config-buildjs-app": "^0.3.11",
-    "babel-loader": "6.2.5",
-    "html-webpack-plugin": "^2.22.0",
-    "react-hot-loader": "3.0.0-beta.2",
-    "webpack-dev-server": "2.1.0-beta.9",
-    "webpack-merge": "0.14.1"
-  }
+  "version": "0.3.11"
 }

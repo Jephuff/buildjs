@@ -1,16 +1,5 @@
 {
   "name": "@ncigdc/webpack-config-buildjs-lib",
   "description": "Webpack Config for Libraries used by BuildJS",
-  "version": "0.3.11",
-  "license": "Apache-2.0",
-  "repository": "NCI-GDC/buildjs",
-  "engines": {
-    "node": ">=5"
-  },
-  "main": "index.js",
-  "dependencies": {
-    "@ncigdc/webpack-config-buildjs-base": "^0.3.11",
-    "@ncigdc/buildjs-config": "^0.3.11",
-    "webpack-merge": "0.14.1"
-  }
+  "version": "0.3.11"
 }

@@ -1,22 +1,5 @@
 {
   "name": "@ncigdc/eslint-config-buildjs-react",
   "description": "ESLint Config for React used by BuildJS",
-  "version": "0.3.11",
-  "license": "Apache-2.0",
-  "repository": "NCI-GDC/buildjs",
-  "engines": {
-    "node": ">=5"
-  },
-  "main": "index.js",
-  "dependencies": {
-    "@ncigdc/eslint-config-buildjs-base": "^0.3.11",
-    "babel-eslint": "7.0.0",
-    "eslint-config-airbnb": "12.0.0",
-    "eslint-plugin-flowtype": "2.19.0",
-    "eslint-plugin-jsx-a11y": "2.2.2",
-    "eslint-plugin-react": "6.3.0"
-  },
-  "peerDependencies": {
-    "eslint": ">=3"
-  }
+  "version": "0.3.11"
 }

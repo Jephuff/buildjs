@@ -1,16 +1,5 @@
 {
   "name": "@ncigdc/jest-config-buildjs",
   "description": "Jest Config used by BuildJS",
-  "version": "0.3.11",
-  "license": "Apache-2.0",
-  "repository": "NCI-GDC/buildjs",
-  "engines": {
-    "node": ">=5"
-  },
-  "main": "index.js",
-  "dependencies": {
-    "@ncigdc/babel-preset-buildjs": "^0.3.11",
-    "@ncigdc/buildjs-config": "^0.3.11",
-    "babel-jest": "16.0.0"
-  }
+  "version": "0.3.11"
 }
